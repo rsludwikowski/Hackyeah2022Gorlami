@@ -28,7 +28,7 @@ public class GiraffeMovement : MonoBehaviour
     void FireBullet()
     {
         GameObject bullet = Instantiate(Bullet, bulletSpawnPoint.position, Quaternion.identity);
-        bullet.GetComponent<Rigidbody>().AddForce(transform.forward * bulletEnergy, ForceMode.Impulse);
+        bullet.GetComponent<Rigidbody>().AddForce(bulletSpawnPoint.forward * bulletEnergy, ForceMode.Impulse);
     }
 
     // Update is called once per frame
