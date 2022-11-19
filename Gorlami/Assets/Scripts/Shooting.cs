@@ -24,7 +24,7 @@ public class Shooting : MonoBehaviour
     private void OnCollisionEnter(Collision collision)
     {
         Debug.Log("Crash!\n");
-        Destroy(gameObject);
+        //Destroy(gameObject);
     }
 
     private void OnTriggerEnter(Collider other)

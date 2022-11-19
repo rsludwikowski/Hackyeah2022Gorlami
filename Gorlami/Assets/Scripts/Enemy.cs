@@ -9,16 +9,11 @@ public class Enemy : MonoBehaviour
 
     public int maxHealth = 3;
     public int currentHealth;
-    public int firerate;
-    public float lastfired;
     public Transform bulletSpawn;
     public GameObject bulletPrefab;
-    public Shooting Shooting;
+    public float bulletSpeed = 30;
+    public float bulletTime = 3;
     // Start is called before the first frame update
-
-
-
-   
     void Start()
     {
         currentHealth = maxHealth;
@@ -26,14 +21,16 @@ public class Enemy : MonoBehaviour
     }
     void Update()
     {
-        EnemyFire();
+        //gameObject.
+            Debug.Log("FIREEEEEEEEE!!!\n");
+            EnemyFire();
     }
     private void OnCollisionEnter(Collision collision)
     {
         string colTag = collision.gameObject.tag;
         switch (colTag)
         {
-            case "Bullet":
+            case "EnemyBullet":
                 Shooting shooting = collision.gameObject.GetComponent<Shooting>();
                 Demage(shooting.bulletDamage);
                 break;
@@ -58,12 +55,13 @@ public class Enemy : MonoBehaviour
     }
 
     private void EnemyFire () {
-        GameObject bullet = Instantiate(bulletPrefab);
-        Physics.IgnoreCollision(bullet.GetComponent<Collider>(), bulletSpawn.parent.GetComponent<Collider>());
-        bullet.transform.position = bulletSpawn.position;
-        Vector3 rotation = bullet.transform.rotation.eulerAngles;
-        bullet.transform.rotation = Quaternion.Euler(rotation.x, transform.eulerAngles.y, rotation.z);
-        bullet.GetComponent<Rigidbody>().AddForce(bulletSpawn.forward * Shooting.speed, ForceMode.Impulse);
-        StartCoroutine(DestroyBullet(bullet, 100000000f));
+        GameObject bullet = Instantiate(bulletPrefab,gameObject.transform.position,Quaternion.identity);
+        Physics.IgnoreCollision(bullet.GetComponent<BoxCollider>(), bulletSpawn.parent.GetComponent<BoxCollider>());
+       
+        //Vector3 rotation = bullet.transform.rotation.eulerAngles;
+        //bullet.transform.rotation = Quaternion.Euler(rotation.x, transform.eulerAngles.y, rotation.z);
+        Vector3 force =new Vector3(0, 0, 20);
+        bullet.GetComponent<Rigidbody>().AddForce( force* bulletSpeed, ForceMode.Impulse);
+        StartCoroutine(DestroyBullet(bullet, bulletTime));
     }
 }
