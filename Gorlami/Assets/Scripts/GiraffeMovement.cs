@@ -11,6 +11,7 @@ public class GiraffeMovement : MonoBehaviour
     public GameObject Bullet;
     public Transform bulletSpawnPoint;
     public float bulletEnergy = 1f;
+    public ParticleSystem particles;
     public Vector3 offsetSpawn = new Vector3( 0f, 0f, 0f );
     public float offFloat = 1f;
     [SerializeField] int HP;
@@ -29,6 +30,7 @@ public class GiraffeMovement : MonoBehaviour
     {
         GameObject bullet = Instantiate(Bullet, bulletSpawnPoint.position, Quaternion.identity);
         bullet.GetComponent<Rigidbody>().AddForce(bulletSpawnPoint.forward * bulletEnergy, ForceMode.Impulse);
+        particles.Play();
     }
 
     // Update is called once per frame
