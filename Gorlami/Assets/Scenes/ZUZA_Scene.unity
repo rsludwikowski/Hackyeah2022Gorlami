@@ -126,7 +126,11 @@ NavMeshSettings:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 --- !u!1 &71846396
+=======
+--- !u!1 &1999058
+>>>>>>> master
 =======
 --- !u!1 &1999058
 >>>>>>> master
@@ -146,6 +150,7 @@ GameObject:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   - component: {fileID: 71846400}
   - component: {fileID: 71846399}
   - component: {fileID: 71846398}
@@ -157,11 +162,14 @@ GameObject:
 >>>>>>> master
 =======
 >>>>>>> master
+=======
+>>>>>>> master
   - component: {fileID: 1999062}
   - component: {fileID: 1999061}
   - component: {fileID: 1999060}
   - component: {fileID: 1999059}
   - component: {fileID: 1999063}
+<<<<<<< HEAD
 <<<<<<< HEAD
   m_Layer: 0
   m_Name: Enemy
@@ -174,11 +182,17 @@ GameObject:
   m_Layer: 0
   m_Name: Enemy
 >>>>>>> master
+=======
+  - component: {fileID: 1999064}
+  m_Layer: 0
+  m_Name: Enemy
+>>>>>>> master
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -196,10 +210,15 @@ BoxCollider:
 --- !u!65 &1999059
 BoxCollider:
 >>>>>>> master
+=======
+--- !u!65 &1999059
+BoxCollider:
+>>>>>>> master
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -217,6 +236,8 @@ BoxCollider:
 >>>>>>> master
 =======
 >>>>>>> master
+=======
+>>>>>>> master
   m_GameObject: {fileID: 1999058}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
@@ -227,6 +248,9 @@ BoxCollider:
 --- !u!23 &1999060
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> master
+=======
 >>>>>>> master
 =======
 >>>>>>> master
@@ -240,7 +264,11 @@ MeshRenderer:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   m_GameObject: {fileID: 71846396}
+=======
+  m_GameObject: {fileID: 1999058}
+>>>>>>> master
 =======
   m_GameObject: {fileID: 1999058}
 >>>>>>> master
@@ -264,7 +292,11 @@ MeshRenderer:
   m_RendererPriority: 0
   m_Materials:
 <<<<<<< HEAD
+<<<<<<< HEAD
   - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+=======
+  - {fileID: 2100000, guid: 3c5a52a0ac6f1b348af0ee87ca4ea18f, type: 2}
+>>>>>>> master
 =======
   - {fileID: 2100000, guid: 3c5a52a0ac6f1b348af0ee87ca4ea18f, type: 2}
 >>>>>>> master
@@ -292,7 +324,11 @@ MeshRenderer:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 --- !u!33 &71846399
+=======
+--- !u!33 &1999061
+>>>>>>> master
 =======
 --- !u!33 &1999061
 >>>>>>> master
@@ -310,9 +346,15 @@ MeshFilter:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   m_GameObject: {fileID: 71846396}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!4 &71846400
+=======
+  m_GameObject: {fileID: 1999058}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!4 &1999062
+>>>>>>> master
 =======
   m_GameObject: {fileID: 1999058}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
@@ -336,6 +378,7 @@ Transform:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   m_GameObject: {fileID: 71846396}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -1.4377, y: 25.226768, z: -39.1017}
@@ -352,10 +395,15 @@ Transform:
 =======
 >>>>>>> master
 =======
+=======
+>>>>>>> master
   m_GameObject: {fileID: 1999058}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 4.35, y: 4.76, z: -32.64}
   m_LocalScale: {x: 1, y: 1, z: 1}
+<<<<<<< HEAD
+>>>>>>> master
+=======
 >>>>>>> master
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -365,7 +413,10 @@ Transform:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> master
 =======
 >>>>>>> master
 =======
@@ -383,6 +434,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 3
+<<<<<<< HEAD
 <<<<<<< HEAD
   currentHealth: 0
 --- !u!1 &99783891
@@ -487,6 +539,8 @@ Transform:
 --- !u!54 &99783896
 Rigidbody:
 =======
+=======
+>>>>>>> master
   currentHealth: 3
   bulletSpawn: {fileID: 1999062}
   bulletPrefab: {fileID: 1000041450435124257, guid: 98c954af3f42b714a8535d63a4687e82, type: 3}
@@ -495,6 +549,7 @@ Rigidbody:
   lastfired: 2.02
 --- !u!20 &1999064
 Camera:
+<<<<<<< HEAD
 >>>>>>> master
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -513,10 +568,13 @@ Camera:
   m_CollisionDetection: 0
 --- !u!114 &99783897
 MonoBehaviour:
+=======
+>>>>>>> master
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
   m_GameObject: {fileID: 99783891}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -529,6 +587,8 @@ MonoBehaviour:
 =======
 >>>>>>> master
 =======
+=======
+>>>>>>> master
   m_GameObject: {fileID: 1999058}
   m_Enabled: 0
   serializedVersion: 2
@@ -566,6 +626,9 @@ MonoBehaviour:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
+<<<<<<< HEAD
+>>>>>>> master
+=======
 >>>>>>> master
 --- !u!1 &790945794
 GameObject:
@@ -740,6 +803,7 @@ Transform:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -1.25, y: 28, z: -55.19}
 =======
@@ -754,11 +818,16 @@ Transform:
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
   m_LocalPosition: {x: -5.58, y: 1.65, z: -27.5}
 >>>>>>> master
+=======
+  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: -5.58, y: 1.65, z: -27.5}
+>>>>>>> master
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -891,6 +960,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 1908256038}
+=======
+  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+>>>>>>> master
 =======
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 >>>>>>> master
