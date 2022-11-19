@@ -19,6 +19,7 @@ public class Schooting : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        //print("collision!\n");
+        Debug.Log("Crash!\n");
+        Destroy(gameObject);
     }
 }
