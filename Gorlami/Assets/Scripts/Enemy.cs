@@ -12,18 +12,22 @@ public class Enemy : MonoBehaviour
     public Transform bulletSpawn;
     public GameObject bulletPrefab;
     public float bulletSpeed = 30;
-    public float bulletTime = 3;
+    public float bulletTime = 30;
+    public float lastfired = 0;
     // Start is called before the first frame update
     void Start()
     {
         currentHealth = maxHealth;
 
     }
-    void Update()
+    void FixedUpdate()
     {
-        //gameObject.
+        if (Time.time - lastfired > 3)
+        {
+            lastfired = Time.time;
             Debug.Log("FIREEEEEEEEE!!!\n");
             EnemyFire();
+        }
     }
     private void OnCollisionEnter(Collision collision)
     {
@@ -56,12 +60,7 @@ public class Enemy : MonoBehaviour
 
     private void EnemyFire () {
         GameObject bullet = Instantiate(bulletPrefab,gameObject.transform.position,Quaternion.identity);
-        Physics.IgnoreCollision(bullet.GetComponent<BoxCollider>(), bulletSpawn.parent.GetComponent<BoxCollider>());
-       
-        //Vector3 rotation = bullet.transform.rotation.eulerAngles;
-        //bullet.transform.rotation = Quaternion.Euler(rotation.x, transform.eulerAngles.y, rotation.z);
-        Vector3 force =new Vector3(0, 0, 20);
-        bullet.GetComponent<Rigidbody>().AddForce( force* bulletSpeed, ForceMode.Impulse);
+        bullet.GetComponent<Rigidbody>().AddForce(bulletSpawn.forward*bulletSpeed, ForceMode.Impulse);
         StartCoroutine(DestroyBullet(bullet, bulletTime));
     }
 }
