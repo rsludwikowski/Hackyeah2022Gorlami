@@ -8,7 +8,11 @@ public class GiraffeMovement : MonoBehaviour
 
     public float speed = 5f;
     Rigidbody rb;
-
+    public GameObject Bullet;
+    public Transform bulletSpawnPoint;
+    public float bulletEnergy = 1f;
+    public Vector3 offsetSpawn = new Vector3( 0f, 0f, 0f );
+    public float offFloat = 1f;
     [SerializeField] int HP;
 
     // Start is called before the first frame update
@@ -20,6 +24,13 @@ public class GiraffeMovement : MonoBehaviour
         HP = 100;
     }
 
+
+    void FireBullet()
+    {
+        GameObject bullet = Instantiate(Bullet, bulletSpawnPoint.position, Quaternion.identity);
+        bullet.GetComponent<Rigidbody>().AddForce(transform.forward * bulletEnergy, ForceMode.Impulse);
+    }
+
     // Update is called once per frame
     void FixedUpdate()
     {
@@ -28,6 +39,7 @@ public class GiraffeMovement : MonoBehaviour
         if (Input.GetButton("Fire1"))
         {
             Debug.Log("FIRE!");
+            FireBullet();
         }
 
 
