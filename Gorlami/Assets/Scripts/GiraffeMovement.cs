@@ -5,7 +5,7 @@ using UnityEngine;
 public class GiraffeMovement : MonoBehaviour
 {
 
-
+    public float speed = 5f;
     Rigidbody rb;
 
     // Start is called before the first frame update
@@ -18,9 +18,12 @@ public class GiraffeMovement : MonoBehaviour
     void FixedUpdate()
     {
 
-        Vector3 MoveVec = new Vector3(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
+        Vector3 MoveVec = new Vector3(Input.GetAxis("Horizontal"),0, Input.GetAxis("Vertical")).normalized;
+
+        MoveVec *= speed * Time.deltaTime;
 
 
+        rb.MovePosition(rb.position + MoveVec);
 
     }
 }
